@@ -1,0 +1,34 @@
+          distance(x) = infinite, for all x belongs to V
+          
+          parent(x) = nil, for all x belongs to V
+          
+          enqueue(s);
+          
+          color(x) = white, for all x belongs to  V
+          
+          color(s) = grey;
+          
+          while (queue not empty) {
+              
+              vertex u = dequeue(Q);
+              
+              for (each vertex v adjacent to u) {
+                  
+                  if (color of v is white) {
+                      
+                      color(v) = grey;
+                      
+                      distance(v) = 1 + distance(u);
+                      
+                      enqueue(v);
+                      
+                      parent(v) = u;
+                      
+                  }
+                  
+              }
+              
+              color(u) = black;
+              
+          }
+        
