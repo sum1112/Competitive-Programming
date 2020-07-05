@@ -289,6 +289,11 @@ void printNumberBits(int n)	// for n > 0
 	}
 }
 
+In java this can be done like this...
+public static String binaryConvertor(int n) {
+         if (n == 0) return "";
+         return binaryConvertor(n / 2) + n % 2;
+     }
 
 
 
