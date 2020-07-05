@@ -1,0 +1,20 @@
+
+
+public void mazeFinder(int row, int col, int[][] grid) {
+         
+         if (row not valid || col not valid || obstruction of some kind || already in path) {
+             return false;
+         }
+         
+         include row and col in solution path;
+         
+         if (mazeFinder(Upper)) return true;
+         if (mazeFinder(Lower)) return true;
+         if (mazeFinder(Right)) return true;
+         if (mazeFinder(Left)) return true;
+         
+         remove row and col from solution path;
+         
+         return false;
+         
+     }
