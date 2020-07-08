@@ -1,0 +1,13 @@
+public static void helper(int N, char from, char to, char aux) {
+		
+		if (N == 0) {
+			return;
+		}
+		
+		helper(N - 1, from, aux, to);
+		
+		System.out.println("Move disk " + N + " from " + from + " to " + to);
+		
+		helper(N - 1, aux, to, from);
+		
+	}
