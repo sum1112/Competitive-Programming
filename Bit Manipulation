@@ -1,0 +1,49 @@
+  public static int countBits(int num) {
+         int cnt = 0;
+         while (num != 0) {
+             if ((num&1) == 1) {
+                 cnt++;
+             }
+             num >>= 1;
+         }
+         return cnt;
+     }
+     static int INT_BITS = 32;
+     
+     public static int getBit(int num, int idx) {
+         return (num>>idx)&1;
+     }
+     
+     public static int setBit1(int num, int idx) {
+         return num | (1<<idx);
+     }
+     
+     public static int setBit0(int num, int idx) {
+         return num & ~(1<<idx);
+     }
+     
+     public static int leftShift(int num, int d) {
+         return (num << d) | (num >> (INT_BITS - d)); 
+     }
+     
+     public static int rightShift(int num, int d) {
+         return (num >> d) | (num << (INT_BITS - d));
+     }
+     
+     public static int removeRightBit(int X) {
+         return X & (X-1);
+     }
+     
+     public static int getRightMostBitValue(int X) {
+         return X & ~(X-1);
+     }
+     
+     public static int countBitEfficient(int X) {
+         int cnt = 0;
+         while (X != 0) {
+             X &= (X-1);
+             cnt++;
+         }
+         return cnt;
+     }
+     
